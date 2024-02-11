@@ -1,13 +1,23 @@
-/* register.css */
-
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #bed0ca; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-color: #bed0ca; /* Fallback color */
+    background-image: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876030.jpg');
 }
 
 h1 {
+    text-align: center;
+    color: #0e2424;
+    margin: 0;
+}
+
+h2 {
     text-align: center;
     color: #ffffff;
     margin: 0;
@@ -15,8 +25,11 @@ h1 {
 
 .container {
     padding: 20px;
-    max-width: 400px;
+    max-width: 100px;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow */
 }
 
 .form-group {
@@ -25,15 +38,17 @@ h1 {
 
 .form-control {
     border: 1px solid #ced4da;
+    width: 80%; /* Adjust the width of the input fields */
+    margin: 0 auto; /* Center the input fields horizontally */
 }
 
 .btn-primary {
-    background-color: #ffffff;
+    background-color: #0e2424; /* Button color */
     color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #ffffff;
+    background-color: #194040; /* Button color on hover */
 }
 
 a {
