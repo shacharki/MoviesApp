@@ -1,0 +1,45 @@
+/* register.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bed0ca; 
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+}
+
+.btn-primary {
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    text-decoration: none;
+}

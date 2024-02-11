@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #bed0ca; 
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-details {
+    width: 40%;
+    left: 50px;
+}
+
+.movie-info {
+    width: 40%;
+    margin-top: 20px;
+}
+
+img {
+    max-width: 70%;
+    max-height: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+h1 {
+    color: #2a7876;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+strong {
+    color: #40c0bb;
+}
+
+h2 {
+    color: #154847;
+}
+
+h3 {
+    color: #ffffff;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0e2424;
+    color: #fff;
+    padding: 8px 16px;
+    border: 1px #000000;
+    border-radius: 8px;
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #0e2424;
+    border-radius: 4px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+}
+
+a {
+    color: #0e2424;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.rating {
+    display: flex;
+    height: 40px;
+    font-size: 0;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    float: right;
+}
+
+.rating label:before {
+    content: "\2605";
+    font-size: 24px;
+    color: #ddd;
+}
+
+.rating input:checked ~ label:before {
+    color: #ffcc00;
+}
+
+.movie-details img {
+    width: 100%;
+    max-height: 400px;
+    margin: 20px auto;
+}
+
+.review-content {
+    font-size: 16px;
+    color: #154847;
+    font-weight: bold;
+}
+
+.review-rating {
+    color: #ffd700;
+    font-size: 24px;
+}
+
+.review-item {
+    margin-bottom: 20px;
+}
+
+.add-review-section {
+    width: 40%;
+    margin-left: -100px;
+    /* margin-top: 20px; */
+}
+
+ul.reviews {
+    width: 50%;
+    margin-top: 20px;
+    padding-left: 0;
+    list-style: none;
+}

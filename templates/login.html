@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="back-button">
+            <a href="{{ url_for('register') }}">Register</a>
+        </div>
+        <div class="title-container">
+            <h1>Children's Movies</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        {% block content %}
+        <h1>Login</h1>
+        {% if form.errors %}
+            <ul>
+                {% for error in form.errors %}
+                    <li style="color: red;">{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form method="POST" action="{{ url_for('login') }}">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <a href="{{ url_for('register') }}">Don't have an account? Register here.</a>
+        {% endblock %}
+    </div>
+</body>
+</html>
