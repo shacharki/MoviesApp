@@ -51,7 +51,7 @@ function setRatingInput(element, rating) {
         const newRatingInput = document.createElement('input');
         newRatingInput.type = 'hidden';
         newRatingInput.name = 'rating';
-        newRatingInput.id = 'rating'; // Set id
+        newRatingInput.id = 'rating';
         form.appendChild(newRatingInput);
         ratingInput = newRatingInput;
     }
