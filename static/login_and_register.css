@@ -1,0 +1,110 @@
+/* login.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    /* background-color: #bed0ca; */
+    background-image: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876030.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 50vh;
+}
+
+h1 {
+    text-align: center;
+    color: #0e2424;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    margin: 0;
+}
+
+
+.container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px; 
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border: 1px solid #ced4da;
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+
+
+.btn-primary {
+    background-color: #0e2424;
+    color: #fff;
+    width: auto; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px; 
+}
+
+.btn-primary:hover {
+    background-color: #1f4d4d;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.btn-login {
+    width: auto; 
+    padding: 8px 16px; 
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+.body-register {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    background-color: #bed0ca;
+    background-image: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876028.jpg');
+} */
+
+.container {
+    padding: 20px;
+    max-width: 100px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.container-login {
+    padding: 2%;
+    width: 40%;
+    max-width: 70%;
+    background-color: #ced4da; 
+    border-radius: 10px; 
+    margin-bottom: 20%;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
