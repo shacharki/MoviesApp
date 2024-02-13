@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='login_and_register.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Font Awesome -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header class="header">
@@ -23,14 +26,19 @@
         <div class="container-login">
             {% block content %}
             <h1>Login</h1>
-            {% if form.errors %}
-                <ul>
-                    {% for error in form.errors %}
-                        <li style="color: red;">{{ error }}</li>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}" role="alert">
+                            {{ message }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                     {% endfor %}
-                </ul>
-            {% endif %}
-            <form method="POST" action="{{ url_for('login') }}">
+                {% endif %}
+            {% endwith %}
+            <form method="POST" action="{{ url_for('login') }}" id="login-form">
                 {{ form.csrf_token }}
                 <div class="form-group">
                     <label for="username"><i class="fas fa-user"></i> Username:</label>
@@ -51,7 +59,7 @@
             {% endblock %}
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="{{ url_for('static', filename='login.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('#toggle-password').click(function(){
