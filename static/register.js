@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    // Function to toggle password visibility
     $('.toggle-password').click(function(){
         $(this).toggleClass('active');
         var input = $(this).closest('.input-group').find('input');
@@ -7,7 +6,6 @@ $(document).ready(function() {
         input.attr('type', type);
     });
 
-    // Function to handle form submission
     $('#register-form').submit(function(event) {
         event.preventDefault();
         
@@ -15,7 +13,6 @@ $(document).ready(function() {
         var password = $('#password').val();
         var confirm_password = $('#confirm_password').val();
         
-        // Perform validation checks
         if (!username || !password || !confirm_password || password !== confirm_password) {
             showError("Please fill in all fields and ensure that passwords match.");
             $('#register-button').prop('disabled', true);
@@ -30,7 +27,6 @@ $(document).ready(function() {
         showSuccessMessage();
     });
 
-    // Function to handle input field changes
     $('#username, #password, #confirm_password').on('input', function() {
         var username = $('#username').val();
         var password = $('#password').val();
@@ -43,12 +39,10 @@ $(document).ready(function() {
         }
     });
 
-    // Function to display error message
     function showError(message) {
         $('#error-message').text(message).show();
     }
 
-    // Function to display success message
     function showSuccessMessage() {
             alert("Registration successful! You can now log in.");
             setTimeout(function() {

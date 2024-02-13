@@ -45,7 +45,7 @@ function highlightStars(element, rating) {
 
 function setRatingInput(element, rating) {
     const form = element.closest('form');
-    const ratingInput = form.querySelector('#rating'); // Update selector
+    const ratingInput = form.querySelector('#rating');
 
     if (!ratingInput) {
         const newRatingInput = document.createElement('input');

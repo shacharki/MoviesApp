@@ -1,9 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, redirect, url_for, flash
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, IntegerField, validators, SubmitField
+from wtforms import StringField, PasswordField, IntegerField, SubmitField
 from wtforms.validators import DataRequired, NumberRange
 
 
@@ -35,7 +35,7 @@ class Review(db.Model):
     __tablename__ = 'review'
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(255))
-    rating = db.Column(db.Integer, default=0)  # Providing a default value for the rating column
+    rating = db.Column(db.Integer, default=0)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     movie_id = db.Column(db.Integer, db.ForeignKey('movie.id'))
 
@@ -100,7 +100,6 @@ def register():
             flash('Username already exists. Please choose a different username.', 'danger')
             return redirect(url_for('register'))
 
-        # Create a new user if username is unique
         new_user = User(username=username, password=password)
         db.session.add(new_user)
         db.session.commit()
