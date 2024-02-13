@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    <div class="body-movie">
     <header class="header">
         <div class="back-button-container">
             <a class="back-button" href="{{ url_for('index') }}"><i class="fas fa-arrow-left"></i> Back to Homepage</a>
@@ -23,7 +24,7 @@
             <h3>{{ movie.title }} - Movie Details</h3>
         </div>
     </header>
-
+<div class="movie-container">
     <div class="container">
         <div class="movie-details">
             <img src="{{ movie.poster_url }}" alt="{{ movie.title }}">
@@ -39,28 +40,7 @@
     </div>
 
     <div class="container">
-        <ul class="reviews">
-            {% for review in reviews %}
-            <li class="review-item">
-                <strong class="review-content">User: {{ review.user.username }}</strong><br>
-                <strong class="review-content">Content:</strong> {{ review.content }}<br>
-                <strong class="review-content">Rating:</strong>
-                {% if review.rating is not none %}
-                {% set rating = review.rating|int %}
-                {% for i in range(1, 6) %}
-                {% if i <= rating %}
-                <i class="fas fa-star review-rating"></i>
-                {% else %}
-                <i class="far fa-star review-rating"></i>
-                {% endif %}
-                {% endfor %}
-                {% else %}
-                Not rated
-                {% endif %}
-            </li>
-            {% endfor %}
-        </ul>
-        <div class="add-review-section">
+             <div class="add-review-section">
             <h2>Add a Review</h2>
             {% if current_user.is_authenticated %}
             <form method="POST" action="{{ url_for('movie_details', movie_id=movie.id) }}" id="review-form">
@@ -86,10 +66,33 @@
             <p>You need to <a href="{{ url_for('login') }}">log in</a> to write a review.</p>
             {% endif %}
         </div>
+        <ul class="reviews">
+            {% for review in reviews %}
+            <li class="review-item">
+                <strong class="review-content">User: {{ review.user.username }}</strong><br>
+                <strong class="review-content">Content:</strong> {{ review.content }}<br>
+                <strong class="review-content">Rating:</strong>
+                {% if review.rating is not none %}
+                {% set rating = review.rating|int %}
+                {% for i in range(1, 6) %}
+                {% if i <= rating %}
+                <i class="fas fa-star review-rating"></i>
+                {% else %}
+                <i class="far fa-star review-rating"></i>
+                {% endif %}
+                {% endfor %}
+                {% else %}
+                Not rated
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+   
 
     </div>
-
+</div>
     <script src="{{ url_for('static', filename='star_rating.js') }}"></script>
+</div>
 </body>
 
 </html>

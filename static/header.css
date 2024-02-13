@@ -8,7 +8,7 @@
 }
 
 .back-button-container {
-    flex: 1;
+    flex: 2;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -17,11 +17,20 @@
 .header a {
     color: #fff;
     text-decoration: none;
-    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #ced4da;
+    border-radius: 8px;
+    padding: 5px;
+    margin-left: 14px;
+    margin: 8px;
 }
 
 .header i {
-    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 .back-button {
@@ -47,7 +56,15 @@
 }
 
 .title-container {
-    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

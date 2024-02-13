@@ -3,7 +3,6 @@
 body {
     margin: 0;
     padding: 0;
-    /* background-color: #bed0ca; */
     background-image: url('https://img.freepik.com/free-photo/movie-background-collage_23-2149876030.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +39,7 @@ h2 {
 
 .form-control {
     border: 1px solid #ced4da;
-    width: 80%; 
+    width: 180%; 
     margin: 0 auto; 
 }
 
@@ -48,7 +47,7 @@ h2 {
 
 .btn-primary {
     background-color: #04162b !important; 
-    color: #fff; 
+    color: #000000; 
     border: none !important; 
     border-radius: 5px; 
     padding: 10px 20px !important; 
@@ -65,7 +64,7 @@ h2 {
 }
 
 a {
-    color: #ffffff;
+    color: #000000;
 }
 
 a:hover {
@@ -97,7 +96,7 @@ a:hover {
     padding: 20px;
     max-width: 100px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.69); 
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
@@ -110,38 +109,7 @@ a:hover {
     background-color: #ced4da; 
     border-radius: 10px; 
     margin-bottom: 20%;
-    background-color: rgba(255, 255, 255, 0.8); 
+    background-color: rgba(255, 255, 255, 0.666); 
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
-}
-
-/* Modal styling */
-.modal-dialog {
-    max-width: 400px;
-}
-
-.modal-content {
-    border-radius: 10px;
-}
-
-.modal-header {
-    background-color: #007bff;
-    color: #fff;
-    border-bottom: none;
-}
-
-.modal-title {
-    font-size: 1.25rem;
-}
-
-.modal-body {
-    padding: 20px;
-}
-
-.modal-footer {
-    border-top: none;
-}
-
-.modal-footer .btn {
-    border-radius: 20px;
 }
